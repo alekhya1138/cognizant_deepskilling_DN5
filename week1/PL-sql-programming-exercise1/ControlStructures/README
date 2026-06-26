@@ -1,0 +1,40 @@
+# Control Structures in PL/SQL
+
+## Objective
+To implement control structures like loops and conditional statements in PL/SQL.
+
+## Scenarios Covered
+1. Interest discount for senior citizens
+2. VIP status assignment based on balance
+3. Loan due reminders
+
+## Concepts Used
+- Cursors
+- FOR loops
+- IF conditions
+- DBMS_OUTPUT
+
+## Database Assumptions (Important)
+The following table structures are assumed for implementation:
+
+### Customers Table
+- customer_id
+- age
+- balance
+- interest_rate
+- IsVIP
+
+### Loans Table
+- loan_id
+- customer_id
+- due_date
+
+## Notes
+- A 1% discount is applied to customers above 60 years.
+- Customers with balance greater than 10,000 are marked as VIP.
+- Loan reminders are generated for due dates within the next 30 days.
+- `DBMS_OUTPUT.PUT_LINE` is used to display messages.
+- Ensure `SET SERVEROUTPUT ON` is enabled in SQL environment to view output.
+
+## Conclusion
+This exercise demonstrates how PL/SQL control structures can be used to process multiple records, apply business logic, and automate database operations efficiently.
