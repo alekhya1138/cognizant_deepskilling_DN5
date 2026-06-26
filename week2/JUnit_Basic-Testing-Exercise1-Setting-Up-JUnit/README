@@ -1,0 +1,118 @@
+# Week 2 - JUnit Basic Testing
+
+## 📁 Exercise 1: Setting Up JUnit
+
+---
+
+## 📌 Scenario
+
+You need to set up JUnit in your Java project to start writing unit tests.
+
+---
+
+## 🎯 Objective
+
+* Configure JUnit in a Java project
+* Create and run a simple test case
+
+---
+
+## 🛠️ Steps
+
+### 1. Create a Java Project
+
+* Open your IDE (VS Code / IntelliJ / Eclipse)
+* Create a new Java project
+
+---
+
+### 2. Add JUnit Dependency
+
+If using **Maven**, add this in `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
+    <scope>test</scope>
+</dependency>
+```
+
+---
+
+### 3. Create Test Class
+
+Create a file:
+
+```
+CalculatorTest.java
+```
+
+---
+
+## 💻 Sample Code
+
+### Calculator Class
+
+```java
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+}
+```
+
+---
+
+### Test Class
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class CalculatorTest {
+
+    @Test
+    public void testAddition() {
+        Calculator calc = new Calculator();
+        int result = calc.add(2, 3);
+        assertEquals(5, result);
+    }
+}
+```
+
+---
+
+## ▶️ Run Tests
+
+* Right-click → Run Test
+  OR
+
+```
+mvn test
+```
+
+---
+
+## 📊 Expected Output
+
+```
+BUILD SUCCESS
+```
+
+---
+
+## 🧠 Key Concepts
+
+* JUnit = Java testing framework
+* `@Test` → defines test methods
+* `assertEquals()` → checks expected vs actual
+
+---
+
+## 🚀 Conclusion
+
+JUnit setup is the first step toward writing reliable and automated tests in Java.
+
+---
